@@ -1,11 +1,28 @@
 <template>
-  <a-watermark content="欢迎来到幕的博客">
-    <a-config-provider :locale="zhCN">
-      <router-view />
-    </a-config-provider>
-  </a-watermark>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App 123"/>
+  </div>
 </template>
-<script lang="ts" setup>
-import zhCN from "ant-design-vue/es/locale/zh_CN";
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
 </script>
-<style lang="less"></style>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
