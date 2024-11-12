@@ -1,13 +1,6 @@
-// 引入项目中需要注册的全局组件
-import SvgIcon from "./SvgIcon/index.vue";
-import Category from "./Category/index.vue";
-const allGlobalComponents: any = { SvgIcon, Category };
-// 引入element-plus图标
-import * as ElementPlusIconsVue from "@element-plus/icons-vue";
-// console.log(allGlobalComponents);
-// console.log(SvgIcon,'==SvgIcon');
-// console.log(ElementPlusIconsVue, '===ElementPlusIconsVue');
-
+// 引入ant-design图标
+import * as ElementPlusIconsVue from "@ant-design/icons-vue";
+const allGlobalComponents: any = {};
 // 对外暴露插件对象
 export default {
   // 务必叫做install对象

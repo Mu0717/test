@@ -1,17 +1,15 @@
-// 通过vue-router插件实现模板路由配置
-import { createRouter, createWebHashHistory } from "vue-router";
-import { constantRoute } from "./routes";
-// 创建路由
-const router = createRouter({
-  // 路由模式hash
-  history: createWebHashHistory(),
-  routes: constantRoute,
-  // 滚动行为
-  scrollBehavior() {
-    return {
-      left: 0,
-      top: 0,
-    };
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+const routes: Array<RouteRecordRaw> = [
+  {
+    path: '/',
+    name: 'layout',
+    component: () => import("../layout/index.vue"),
   },
-});
-export default router;
+]
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes
+})
+
+export default router
